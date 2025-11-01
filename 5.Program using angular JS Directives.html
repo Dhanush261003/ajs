@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>AngularJS Basic Directives Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app="">
+  <center><h1>Program Based on Basic AngularJS Directives</h1></center>
+
+  <!-- ng-init and expression binding -->
+  <h2>ng-init directive and binding data with expression</h2>
+  <div ng-init="radius=50; PI=3.14">
+    Circumference of a circle of radius 50 is {{ 2 * PI * radius }}
+    <br><br>
+
+    <!-- ng-bind directive -->
+    <h2>ng-bind directive</h2>
+    Circle circumference: <span ng-bind="2 * PI * radius"></span><br>
+  </div>
+
+  <br>
+  <!-- ng-model directive -->
+  <h2>ng-model directive</h2>
+  <div>
+    <p>Name: <input type="text" ng-model="msg"></p>
+    <p>Hello {{ msg }}</p>
+  </div>
+
+  <br>
+  <!-- ng-init and ng-repeat -->
+  <h2>ng-init and ng-repeat directives for array operations</h2>
+  <div ng-init="array=[10,20,30,40]">
+    <ol>
+      <li ng-repeat="x in array">{{ x }}</li>
+    </ol>
+  </div>
+
+  <br>
+  <!-- ng-if directive -->
+  <h2>ng-if directive</h2>
+  <div ng-init="checked=true">
+    New user: <input type="checkbox" ng-model="checked">
+    <br><br>
+    NAME: <input type="text" ng-if="checked"><br>
+  </div>
+
+  <br>
+  <!-- ng-readonly directive -->
+  <h2>ng-readonly directive</h2>
+  Read only: <input type="text" ng-readonly="checked" value="my programming line"><br>
+
+  <br>
+  <!-- ng-disabled directive -->
+  <h2>ng-disabled directive</h2>
+  Disabled: <input type="text" ng-disabled="checked" value="just see"><br>
+</body>
+</html>

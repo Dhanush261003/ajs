@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <center>
+        <h2>Program using Conditional Statement</h2>
+    </center>
+
+    <label for="fname">Value of A:</label>
+    <input type="text" id="fname" name="fname" size="50"><br><br>
+
+    <label for="fname1">Value of B:</label>
+    <input type="text" id="fname1" name="fname1" size="50"><br><br>
+
+    <input type="button" value="Calculation" onclick="switch1()">
+    <input type="button" value="Clear" onclick="clear1()">
+
+    <script>
+        function switch1() {
+            let a = parseInt(fname.value);
+            let b = parseInt(fname1.value);
+            let result;
+            if (!a || !b) {
+                alert("Value is missing! Please enter both A and B.");
+            }
+            else {
+                let d = parseInt(prompt("Enter your choice 0: Add 1: Sub 2: Multiply 3: Divide"));
+                switch (d) {
+                    case 0:
+                        result = a + b;
+                        break;
+                    case 1:
+                        result = a - b;
+                        break;
+                    case 2:
+                        result = a * b;
+                        break;
+                    case 3:
+                        result = a / b;
+                        break;
+                }
+                document.getElementById("printvalue").innerHTML = "Resultant value: " + result;
+            }
+        }
+        function clear1() {
+            fname.value = "";
+            fname1.value = "";
+            fname2.value = "";
+        }
+    </script>
+    <br><br>
+    <h3>OUTPUT</h3><p id="printvalue"></p>
+</body>
+</html>

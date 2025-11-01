@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>innerHTML</title>
+</head>
+
+<body>
+    <center>
+        <h1>InnerHTML Web Page Design</h1>
+    </center>
+    <br><br>
+
+    <!-- Script for changing background color -->
+    <script>
+        function changeColor() {
+            var newColor = document.getElementById('colorPicker').value;
+            document.getElementById('colorMsg').style.background = newColor;
+        }
+    </script>
+
+    <center>
+        <div id="colorMsg" style="font-size: 18px; width: 150px; height: 100px; padding: 5px; text-align: center;">
+            Choose a background color...
+        </div>
+        <br>
+        <select id="colorPicker" onchange="changeColor()" align="center">
+            <option value="transparent">None</option>
+            <option value="yellow">Yellow</option>
+            <option value="salmon">Salmon</option>
+            <option value="lightblue">Light Blue</option>
+            <option value="limegreen">Lime Green</option>
+        </select>
+    </center>
+
+    <br><br>
+    <center>
+        <h1>_______________________________________________________________</h1>
+    </center>
+    <br><br>
+
+    <!-- Script for displaying input text -->
+    <script>
+        function showMsg() {
+            var userInput = document.getElementById('userInput').value;
+            document.getElementById('userMsg').innerHTML = userInput;
+        }
+    </script>
+
+    <input type="text" maxlength="40" id="userInput" onkeyup="showMsg()" placeholder="Enter text here...">
+    <p id="userMsg"></p>
+
+</body>
+
+</html>
+ 

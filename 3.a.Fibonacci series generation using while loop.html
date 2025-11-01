@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Program using While Loop</title>
+</head>
+<body>
+    <center>
+        <h1>Fibonacci Program using While Looping Statement</h1>
+    </center>
+
+    Enter a number:
+    <input id="num">
+    <br><br>
+    <button onclick="fib()">Fibonacci</button>
+
+    <script type="text/javascript">
+        function fib() {
+            var var1 = 0, var2 = 1, var3, range_value;
+            range_value = parseInt(num.value);
+
+            document.write("Here is the Fibonacci series up to " + range_value + ":<br>");
+
+            while (var1 < range_value) {
+                document.write(var1 + " ");
+                var3 = var1 + var2;
+                var1 = var2;
+                var2 = var3;
+            }
+        }
+    </script>
+</body>
+</html>

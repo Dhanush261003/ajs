@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <center>
+        <h2>Greatest among Three Numbers using Nested if</h2>
+    </center>
+
+    <label for="fname">Value of A:</label>
+    <input type="text" id="fname" name="fname" size="50"><br><br>
+
+    <label for="fname1">Value of B:</label>
+    <input type="text" id="fname1" name="fname1" size="50"><br><br>
+
+    <label for="fname2">Value of C:</label>
+    <input type="text" id="fname2" name="fname2" size="50"><br><br>
+
+    <input type="button" value="Greater Value" onclick="ife()">
+    <input type="button" value="Clear" onclick="clear1()">
+
+    <script>
+        function ife() {
+            let a = parseInt(fname.value);
+            let b = parseInt(fname1.value);
+            let c = parseInt(fname2.value);
+            let result;
+
+            // Validation
+            if (!a || !b || !c) {
+                alert("Please enter valid numbers for A, B, and C.");
+                return;
+            }
+
+            // Comparison logic
+            if (a > b && a > c) {
+                result = "The value " + a + " is the greatest.";
+            } else if (b > c) {
+                result = "The value " + b + " is the greatest.";
+            } else {
+                result = "The value " + c + " is the greatest.";
+            }
+
+            printvalue.innerHTML = result;
+        }
+
+        function clear1() {
+            fname.value = "";
+            fname1.value = "";
+            fname2.value = "";
+            printvalue.innerHTML = "";
+        }
+    </script>
+
+    <br><br>
+    <h3>OUTPUT</h3>
+    <p id="printvalue"></p>
+</body>
+
+</html>

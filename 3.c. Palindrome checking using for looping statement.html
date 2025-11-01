@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Palindrome</title>
+</head>
+<body>
+    <center>
+        <h1>Validate Palindrome (Numbers or Strings)</h1>
+    </center>
+
+    Enter a string or number:
+    <input id="stringinput">
+    <br><br>
+    <button onclick="validatePalin(stringinput.value)">Palindrome</button>
+
+    <script>
+        function validatePalin(str) {
+            const len = str.length;
+            var result = 0;
+            for (let i = 0; i < len / 2; i++) {
+                if (str[i] != str[len - 1 - i]) {
+                    result = 1; 
+                    break;
+                }
+            }
+
+            if (result == 0) {
+                alert("It is a Palindrome!");
+            } else {
+                alert("It is NOT a Palindrome!");
+            }
+        }
+    </script>
+</body>
+</html>

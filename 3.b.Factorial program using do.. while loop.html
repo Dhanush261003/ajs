@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <center>
+        <h1>Factorial Program using DO WHILE Looping Statement</h1>
+    </center>
+    Enter a number: <input id="num"> <br><br>
+    <button onclick="fact()">Factorial</button>
+    <p id="res"></p>
+    <script>
+        function fact() {
+            i = 1;
+            f = 1;
+            num = parseInt(document.getElementById("num").value)
+            do {
+                f = f * i;
+                i = i + 1;
+                num = num - 1;
+            } while (num > 0);
+            i = i - 1;
+            document.getElementById("res").innerHTML = "The factorial of " + num + " is: " + f;
+        }
+    </script>
+</body>
+
+</html>
